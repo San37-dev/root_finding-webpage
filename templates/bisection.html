@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisection Method Page</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bisection Method for Root Finding</h1>
+        <form method="post">
+            <label for="function">Enter function in terms of x (e.g., 2 * np.cos(x) - x):</label><br>
+            <input type="text" id="function" name="function" placeholder="Enter function" required><br>
+            <label for="a">Enter lower bound (a):</label><br>
+            <input type="number" id="a" name="a" step="any" placeholder="Lower bound" required><br>
+            <label for="b">Enter upper bound (b):</label><br>
+            <input type="number" id="b" name="b" step="any" placeholder="Upper bound" required><br><br>
+            <button type="submit">Run Bisection Method</button>
+        </form>
+        <div class="output">
+            <h2>Output:</h2>
+            <p>{{ output|safe }}</p>
+        </div>
+        <a href="/">
+            <button class="home-button">Go to Home Page</button>
+        </a>
+    </div>
+</body>
+</html>
